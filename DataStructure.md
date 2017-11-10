@@ -97,6 +97,61 @@ print(cars)
 len(cars)
 ```
 
+### 切片
+要创建切片,可指定要使用的第一个元素和最后一个元素的索引。与函数 range() 一样, Python 在到达你指定的第二个索引前面的元素后停止。要输出列表中的前三个元素,需
+要指定索引 0~3 ,这将输出分别为 0 、 1 和 2 的元素。
+下面的示例处理的是一个运动队成员列表:
+```python
+players = ['charles', 'martina', 'michael', 'florence', 'eli']
+print(players[0:3])
+
+# 如果你没有指定第一个索引, Python 将自动从列表开头开始:
+players = ['charles', 'martina', 'michael', 'florence', 'eli']
+print(players[:4])
+
+# 要让切片终止于列表末尾,也可使用类似的语法。例如,如果要提取从第 3 个元素到列表末尾的所有元素,可将起始索引指定为 2 ,并省略终止索引:
+players = ['charles', 'martina', 'michael', 'florence', 'eli']
+print(players[2:])
+
+# 无论列表多长,这种语法都能够让你输出从特定位置到列表末尾的所有元素。本书前面说过,负数索引返回离列表末尾相应距离的元素,因此你可以输出列表末尾的任何切片。
+# 例如,如果你要输出名单上的最后三名队员,可使用切片 players[-3:] :
+players = ['charles', 'martina', 'michael', 'florence', 'eli']
+print(players[-3:])
+
+# 要复制列表,可创建一个包含整个列表的切片,方法是同时省略起始索引和终止索引( [:] )。这让 Python 创建一个始于第一个元素,终止于最后一个元素的切片,即复制整个列表。
+
+### 元组
+元组是有序的不可变数据集合。元组一旦创建，元素的值将不可修改。python 将不能修改的值称为不可变的。元组则是不可变的列表。
+元组的定义和使用和列表非常相似，元组使用圆括号来定义，同样使用索引来访问元素:
+```python
+dimensions = (200, 50)
+print(dimensions[0])
+print(dimensions[1])
+```
+下面来尝试修改元组 dimensions 中的一个元素,看看结果如何:
+```python
+dimensions = (200, 50)
+dimensions[0] = 250
+## 处的代码试图修改第一个元素的值,导致 Python 返回类型错误消息。由于试图修改元组的操作是被禁止的,因此 Python 指出不能给元组的元素赋值:
+Traceback (most recent call last):
+  File "dimensions.py", line 3, in <module>
+    dimensions[0] = 250
+TypeError: 'tuple' object does not support item assignment
+```
+##### 修改元组变量
+虽然不能修改元组的元素,但可以给存储元组的变量赋值。因此,如果要修改前述矩形的尺寸,可重新定义整个元组:
+```python
+dimensions = (200, 50)
+print("Original dimensions:")
+for dimension in dimensions:
+  print(dimension)
+
+dimensions = (400, 100)
+print("\nModified dimensions:")
+for dimension in dimensions:
+  print(dimension)
+```
+***除了修改元素的值，列表中的所有操作都可以用于元组上***
 
 
 
