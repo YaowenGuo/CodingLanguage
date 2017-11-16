@@ -63,6 +63,41 @@ for value in range(1,11):
 列表解析允许将一个 for 循环表达式放在列表的方括号中，用于生成你要存储到列表中的值。表达式后跟一个 for 循环来为表达式提供值。这里表达式为value**2，
 使用for value in range(1,11)为value提供值，表达式的结果将作为新创建列表的元素。
 
+### 遍历字典
+```python
+user_0 = {
+    'username': 'efermi',
+    'first': 'enrico',
+    'last': 'fermi',
+}
+for key, value in user_0.items():
+    print("\nKey: " + key)
+    print("Value: " + value)
+```
+要编写用于遍历字典的for 循环，可声明两个变量，用于存储键—值对中的键和值。对于这两个变量，可使用任何名称。
+for 语句的第二部分包含字典名和方法items() ，它返回一个键—值对列表。接下来，for 循环依次将每个键—值对存储到指定的两个变量中。在前面的示例中，我 们使用这两个变量来打印每个键及其相关联的值。
+
+*** 注意，即便遍历字典时，键—值对的返回顺序也与存储顺序不同。Python不关心键—值对的存储顺序，而只跟踪键和值之间的关联关系。***
+
+##### 遍历字典中的所有键, 遍历字典中的所有值
+在不需要使用字典中的值时，方法keys() 很有用。下面来遍历字典favorite_languages ，并将每个被调查者的名字都打印出来:
+```python
+favorite_languages = {
+    'jen': 'python',
+    'sarah': 'c',
+    'edward': 'ruby',
+    'phil': 'python',
+}
+for name in favorite_languages.keys():
+    print(name.title())
+```
+值使用 values() 方法。
+
+
+
+
+
+
 
 
 
