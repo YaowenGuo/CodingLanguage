@@ -94,6 +94,41 @@ for name in favorite_languages.keys():
 值使用 values() 方法。
 
 
+### while 循环
+for 循环用于针对集合中的每个元素都一个代码块，而while 循环不断地运行，直到指定的条件不满足为止。
+```python
+current_number = 1
+while current_number <= 5:
+print(current_number) current_number += 1
+```
+
+### break 退出循环
+要立即退出while 循环，不再运行循环中余下的代码，也不管条件测试的结果如何，可使用break 语句。break 语句用于控制程序流程，可使用它来控制哪些代码行将执行，
+哪些代码行不执行，从而让程序按你的要求执行你要执行的代码。 例如，来看一个让用户指出他到过哪些地方的程序。在这个程序中，我们可以在用户输入'quit' 后使用break 语句立即退出while 循环:
+```python
+prompt = "\nPlease enter the name of a city you have visited:" prompt += "\n(Enter 'quit' when you are finished.) "
+while True:
+    city = input(prompt)
+    if city == 'quit':
+        break
+    else:
+        print("I'd love to go to " + city.title() + "!")
+```
+### 在循环中使用continue
+要返回到循环开头，并根据条件测试结果决定是否继续执行循环，可使用continue 语句，它不像break 语句那样不再执行余下的代码并退出整个循环。例如，来看一个从1数 到10，但只打印其中偶数的循环:
+```python
+current_number = 0
+while current_number < 10:
+    current_number += 1
+    if current_number % 2 == 0:
+        continue
+    
+    print(current_number)
+```
+
+我们首先将current_number 设置成了0，由于它小于10，Python进入while 循环。进入循环后，我们以步长1的方式往上数(见❶)，因此current_number 为1。接下 来，if 语句检查current_number 与2的求模运算结果。如果结果为0(意味着current_number 可被2整除)，就执行continue 语句，让Python忽略余下的代码，并返回 到循环的开头。如果当前的数字不能被2整除，就执行循环中余下的代码，Python将这个数字打印出来:
+prompt = "\nTell me something, and I will repeat it back to you:" prompt += "\nEnter 'quit' to end the program. "
+
 
 
 
