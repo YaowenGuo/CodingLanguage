@@ -4,23 +4,21 @@
 
 hr 后面的 / 就是xhtml规定的结束标注，根本不是没有结束标志，因为html中的hr是一个空标签，在xhtml中要求空标签必须结束，所有就在前面加一个/, 其实&lt;hr/&gt;也是可以的，但是为了应对所有浏览器的兼容性，最好在“/” 前面加上一个空格.以上。
 
-
-
 &lt;address&gt;  （比如电子邮件地址）、签名或者文档的作者身份
-
-
 
 &lt;code&gt; 代码 在文章中一般如果要插入多行代码时不能使用&lt;code&gt;标签了。如果是多行代码，可以使用&lt;pre&gt;标签。作用是 防止浏览器误认为是要执行代码，而没显示代码。加了标签浏览器就不会执行了，而是像文本一样显示出来
 
-
-
 `<pre>`标签不只是为显示计算机的源代码时用的，在你需要在网页中预显示格式时都可以使用它，只是`<pre>`标签的一个常见应用就是用来展示计算机的源代码。
 
+#### 列表
+```
+<ul>
+    <li>我的第一个列表信息</li>
+    <li>我的第二个列表信息</li>
+</ul>
+```
 
-
-&lt;ul&gt;&lt;li&gt;我的第一个列表信息&lt;/li&gt;&lt;/ul&gt; 
-
-li 在英文里代表 List
+li 在英文里代表 List，列表中的一项。
 
 ol 在英文里代表 ordered list
 
@@ -28,15 +26,11 @@ ul 在英文里代表 unordered list
 
 ol有序列表；ul无序列表；li列表项目
 
-
-
 &lt;div&gt; 在网页制作过程过中，可以把一些独立的逻辑部分划分出来，放在一个`<div>`标签中，这个&lt;div&gt;标签的作用就相当于一个容器。
 
 1.div和span，2个都是用来划分区间但是没有实际语义的标签,差别就在于div是块级元素,不会其他元素在同一行;span是内联元素~可以与其他元素位于同一行~
 
 用`id`属性来为`<div>`提供唯一的名称，这个就像我们每个人都有一个身份证号，这个身份证号是唯一标识我们的身份的，也是必须唯一的。
-
-
 
 创建表格的四个元素：
 
@@ -72,8 +66,6 @@ table、tbody、tr、th、td
 
 女士化好妆在真正出来见人\)
 
-
-
 3、&lt;tr&gt;…&lt;/tr&gt;：表格的一行，所以有几对tr 表格就有几行。
 
 4、&lt;td&gt;…&lt;/td&gt;：表格的一个单元格，一行中包含几对`<td>...</td>`，说明一行中就有几列。
@@ -85,8 +77,6 @@ table、tbody、tr、th、td
 1、table表格在没有添加css样式之前，在浏览器中显示是没有表格线的
 
 2、表头，也就是th标签中的文本默认为**粗体**并且**居中**显示
-
-
 
 ```
 <a  href="目标网址"  title="鼠标滑过显示的文本" arget="_blank">链接显示的文本</a>
@@ -112,26 +102,23 @@ href：Hypertext Reference的缩写。意思是超文本引用
 
 `<a>`标签还有一个作用是可以链接Email地址，使用mailto能让访问者便捷向网站管理者发送电子邮件。我们还可以利用`mailto`做许多其它事情。下面一一进行讲解，请看详细图示：
 
-
-
-  
-
-
 Mailto后为收件人地址，cc后为抄送地址，bcc后为密件抄送地址，subject后为邮件的主题，body后为邮件的内容，如果Mailto后面同时有多个参数的话，第一个参数必须以“?”开头，后面的每一个都以“&”开头。下面是一个完整的实例:Mailto:aaa@xxx.com?cc=bbb@yyy.com&bcc=ccc@zzz.com&subject=主题&body=邮件内容
 
 引号只有一对，代码中间不能留空
 
 &lt;form  method="post" action="save.php"&gt;
 
-    账户: &lt;input type="text" name="myName"/&gt;	&lt;br&gt;
+```
+账户: &lt;input type="text" name="myName"/&gt;    &lt;br&gt;
 
-    密码: &lt;input type="password" name="pass"/&gt;&lt;br&gt;
+密码: &lt;input type="password" name="pass"/&gt;&lt;br&gt;
 
-    账户:  &lt;input  type="text"  name="myName" placeholder='请输入账号'/&gt;&lt;br&gt;
+账户:  &lt;input  type="text"  name="myName" placeholder='请输入账号'/&gt;&lt;br&gt;
 
-    账户: &lt;input  type="text"  name="myName" value='请输入账号'/&gt;
+账户: &lt;input  type="text"  name="myName" value='请输入账号'/&gt;
+```
 
-&lt;/form&gt; 
+&lt;/form&gt;
 
 value="xxx" 应该有的比较少了吧？感觉 placeholder="xxx" 的体验更好一些。
 
@@ -157,10 +144,6 @@ text 默认。定义单行输入字段，用户可在其中输入文本。默认
 
 url 定义用于 URL 的文本字段
 
-
-
-
-
 ```
 <textarearows="行数"cols="列数">文本</textarea>
 ```
@@ -183,27 +166,25 @@ name 相同为同一组。
 
 当**type="radio"**时，控件为**单选框，**当**type="checkbox"**时，控件为**复选框**
 
-
-
 下拉菜单
 
 &lt;label&gt;爱好:&lt;/label&gt;
 
-    &lt;select&gt;
+```
+&lt;select&gt;
 
-      &lt;option value="看书"&gt;看书&lt;/option&gt;
+  &lt;option value="看书"&gt;看书&lt;/option&gt;
 
-      &lt;option value="旅游" selected="selected"&gt;旅游&lt;/option&gt;
+  &lt;option value="旅游" selected="selected"&gt;旅游&lt;/option&gt;
 
-      &lt;option value="运动"&gt;运动&lt;/option&gt;
+  &lt;option value="运动"&gt;运动&lt;/option&gt;
 
-      &lt;option value="购物"&gt;购物&lt;/option&gt;
+  &lt;option value="购物"&gt;购物&lt;/option&gt;
 
-    &lt;/select&gt;
+&lt;/select&gt;
+```
 
-下拉列表也可以进行多选操作，在&lt;select&gt;标签中设置`multiple="multiple"`属性，就可以实现多选功能，在 windows 操作系统下，进行多选时按下**`Ctrl`**键同时进行**`单击`**（在 Mac下使用Command+单击），可以选择多个选项。如下代码：
-
-
+下拉列表也可以进行多选操作，在&lt;select&gt;标签中设置`multiple="multiple"`属性，就可以实现多选功能，在 windows 操作系统下，进行多选时按下`Ctrl`键同时进行`单击`（在 Mac下使用Command+单击），可以选择多个选项。如下代码：
 
 label标签不会向用户呈现任何特殊效果，它的作用是为鼠标用户改进了可用性。如果你在 label 标签内点击文本，就会触发此控件。就是说，当用户单击选中该label标签时，浏览器就会自动将焦点转到和标签相关的表单控件上（就自动选中和该label标签相关连的表单控件上）。
 
@@ -212,6 +193,4 @@ label标签不会向用户呈现任何特殊效果，它的作用是为鼠标用
 &lt;input type="radio" name="gender" id="male" /&gt;
 
 不加label的话鼠标一定要点击小圆点才能激活条目,加了label可以直接点击对应的文字来激活条目
-
-
 
