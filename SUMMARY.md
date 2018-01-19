@@ -17,6 +17,7 @@
   * [选择器](css-ceng-die-yang-shi-biao-cascading-style-sheets/xuan-ze-qi.md)
   * [继承、层叠、特殊性、重要性](css-ceng-die-yang-shi-biao-cascading-style-sheets/ji-cheng-3001-ceng-die.md)
   * [盒子模型](css-ceng-die-yang-shi-biao-cascading-style-sheets/he-zi-mo-xing.md)
+  * [布局模型](css-ceng-die-yang-shi-biao-cascading-style-sheets/bu-ju-mo-xing.md)
 * [JS 常用函数](js-chang-yong-han-shu.md)
   * [used](js-chang-yong-han-shu/used.md)
 
