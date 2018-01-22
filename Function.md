@@ -6,12 +6,18 @@
 ### javascript 
 使用function 关键字定义
 ```script
-function 函数名()
+function 函数名(x, y, ...)
 {
      函数代码;
+     return 值;
 }
 ```
 函数的调用也要写在<script></sctipt>标签内部。
+还可以使用html标签的onclick属性调用。
+<input type="button"  value="点点我" onclick="tcon()"> 
+
+函数不需要声明返回，直接return即可，这也是弱类型语言的好处。
+
 
 ### python
 ```python

@@ -14,3 +14,20 @@ JavaScript代码在网页读取到该语句的时候就会执行。
 1，将Script放在合适的，尽量靠近尾部的地方；
 
 2，为所有的js文件中需要被调用的函数，在HTML中实现一个空函数（放在靠前的位置），这样当页面需要的js文件没有download完成时，用户点击按钮等操作之后出发一个空函数
+
+
+
+#### 输出内容
+
+document.write(mychar);
+
+为什么document.write被认为是“不好的做法”呢？ - 提到它“最好使用安全和DOM友好的DOM操作方法”（document.createElement，element.appendChild等）。
+
+#### 警告（alert 消息对话框）
+```
+<script type="text/javascript">
+   var mynum = 30;
+   alert("hello!");
+   alert(mynum);
+</script>
+```
