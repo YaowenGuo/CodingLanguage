@@ -22,4 +22,6 @@
 * [JS 常用函数](js-chang-yong-han-shu.md)
   * [used](js-chang-yong-han-shu/used.md)
   * [事件](js-chang-yong-han-shu/shi-jian.md)
+  * [window对象](js-chang-yong-han-shu/windowdui-xiang.md)
+  * [DOM](js-chang-yong-han-shu/dom.md)
 
