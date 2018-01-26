@@ -38,7 +38,86 @@
 
 ## 基础语法和include的使用
 
+### 模板中输出变量
+
+只需要{{php变量名}}即可
+<p>{{$name}}</p>
+
+### 模板中调用php代码
+也是在双花括号中写即可
+
+{{time()}}
+{{in_array($name, $array)}}
+{{var_dump($array)}}
+{{isset($name) ? $name : '默认值'}}
+{{$name or "默认值"}}
+
+### 原样输出
+
+想要输数花括号，在花括号前加@
+@{{$name or "默认值"}}
+
+
+### 模板中的注释
+
+{{-- 注释 --}} 模板注释在网页中是看不到的。
+### 引入自视图include的使用
+有些模块并不是在每个页面都需要，但是一部分页面却需要。可以使用include将其引入进来。
+@include("路径.文件名") 文件名不用带后缀
+
+在include的时候，还可以传递参数
+@include("路径.文件名", ['message'=>'value', ...])
+
 ## 流程控制
+有些页面需要根据页面的不同，生成不同的内容，就需要if判断
+### if
+@if ($name == 'sean') 
+    <p> 等等</p>
+@elseif($name == 'a')
+    <h1>a</h1>
+@else
+    ss
+@endif
+
+### unless
+和if一样用户条件判断，但是if的取反
+@unlsess ($name != 'a')
+    a
+@endless
+
+### for
+
+@for ($i = 0; i < 10; i++)
+   {{$i}}
+@endfor
+
+### foreach
+
+@foreach ($array as $value)
+    <p>{{$value}}</p>
+@endforeach
+
+@forelse ($array as $value)
+    <p>{{$value}}</p>
+@empty
+    数据不存在时的显示
+@endforelse
 
 ## 模板中的URL
+例如，控制器中的方法
+public function urlTest（） {
+return “testUrl”;
+}
 
+添加路由
+Route::get('testUrl', ['as' => 'url', 'uesrs' => 'RouteTestUrl@testUrl'])
+
+### @url()
+通过路由的名称生成url
+<a href=“{{ url('testUrl') }}”>url()</a>
+### @action()
+通过控制器及指定方法名生成url
+<a href=“{{ action('StudnetControler@urlTest') }}”>action()</a>
+### @route()
+通过路由的别名生成url
+<a href=“{{ route('url') }}”>route()</a>

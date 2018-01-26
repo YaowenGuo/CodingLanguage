@@ -12,6 +12,7 @@
   * [Model](laravel/model.md)
   * [数据库](laravel/shu-ju-ku.md)
   * [View的Blade模板引擎](laravel/viewde-bland-mo-ban-yin-qing.md)
+  * [表单](laravel/biao-dan.md)
 * [HTML](html.md)
   * [标签](html/biao-qian.md)
 * [CSS 层叠样式表 \(Cascading Style Sheets\)](css-ceng-die-yang-shi-biao-cascading-style-sheets.md)
