@@ -11,6 +11,7 @@
   * [视图](laravel/shi-tu.md)
   * [Model](laravel/model.md)
   * [数据库](laravel/shu-ju-ku.md)
+  * [View的Blade模板引擎](laravel/viewde-bland-mo-ban-yin-qing.md)
 * [HTML](html.md)
   * [标签](html/biao-qian.md)
 * [CSS 层叠样式表 \(Cascading Style Sheets\)](css-ceng-die-yang-shi-biao-cascading-style-sheets.md)
@@ -24,4 +25,6 @@
   * [事件](js-chang-yong-han-shu/shi-jian.md)
   * [window对象](js-chang-yong-han-shu/windowdui-xiang.md)
   * [DOM](js-chang-yong-han-shu/dom.md)
+* [JQuery](jquery.md)
+  * [样式篇](jquery/yang-shi-pian.md)
 

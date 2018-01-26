@@ -198,12 +198,76 @@ Studnet::count(); 可以直接使用，因为已经关联好了表。
 #### ORM中的新增，自定义时间戳，以及批量赋值
 
 ##### 通过模型新增数据，需要自定义时间戳
-新生成一个模型对象，然后给各个属性赋值，最后调用模型的save
+新生成一个模型对象，然后给各个属性赋值，最后调用模型的save() 方法即可，但是，此时插入的数据会发现，插入时间和更新时间都是当年，而不够精确。这是因为ORM 会自动维护插入时间和更新时间这两个字段。如果不想要自动更新，可以在模型（model） 中设置关闭。
+在对应的模型中添加：
+public $timestamps = false;
+
+更多时候，我们希望它能够自动维护时间戳，但是想要按照一定的格式，这时候可以指定时间戳格式。同样在模型中添加
+protected function getDateFormate() {
+    reutrn date();// 当前时间戳
+}
+
+获取时间戳，只需要访问对象的create_at属性即可
+$studnet = Studnet::find(2017);
+echo $studnet->created_at;
+但是，此时获取的是一个已经格式化了的日期字符串。要想获取原始的时间戳，只需要在模型中添加一个方法。
+protected function asDateTime($value) {
+    return $value;
+}
+
+此时就可以自己对时间戳格式化
+echo date('Y-m-d H:i:s', $student->created_at);
+
 ##### 使用模型的create方法新增数据（设计到批量赋值)
 
+只需要调用继承来的静态create()方法，参数是一个字段名为key的map。返回的是一个对象。在创建对象的时候，会插入数据。但是现在执行会出错，因为laravel默认不允许批量插入数据，想要此方法执行成功，可以在模型中添加允许批量插入的字段。
+
+protected $fillable = $['name', 'age', ...字段名称];
+
+还可以指定不允许批量插入的字段
+
+protected $guarded = [不允许批量插入的字段名];
 
 
+查找，不存在则插入
 
+$student = Student::firstOrCreate(['name'=>'小李']); // 返回查询或者插入的对象。
+
+查找/创建，并不自动插入，需要的话，就自己调用save方法保存。
+
+$student = Student::firstOrNew(['name'=>'小李']);
+
+
+#### 修改数据
+
+##### 通过模型更新数据
+
+先查找，后保存
+$student = Student::find(1024);
+$student->name = 'KT';
+$studnet->save(); // 保存到数据库
+
+
+##### 结合查询语句批量更新
+
+$num = Student::where('id', '>', '1000')
+    ->update(['age'=>40]); //返回更新的行数
+    
+    
+#### 删除数据
+
+##### 通过模型删除
+
+$student = Studnet::find(1000);
+$bool = $student.delete();
+
+##### 通过主键删除
+
+$num = Studnet::destroy(1000); // 返回删除数量，还可以传入多个id。
+
+##### 删除指定条件的数据
+
+$num = Student::where('id', '>', 1000)->delete();
 
 
 
