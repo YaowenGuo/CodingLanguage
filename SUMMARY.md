@@ -28,4 +28,7 @@
   * [DOM](js-chang-yong-han-shu/dom.md)
 * [JQuery](jquery.md)
   * [样式篇](jquery/yang-shi-pian.md)
+  * [样式操作](jquery/yang-shi-cao-zuo.md)
+* Ajax
+  * [介绍](jie-shao.md)
 
