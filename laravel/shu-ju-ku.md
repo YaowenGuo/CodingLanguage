@@ -203,7 +203,7 @@ Studnet::count(); 可以直接使用，因为已经关联好了表。
 public $timestamps = false;
 
 更多时候，我们希望它能够自动维护时间戳，但是想要按照一定的格式，这时候可以指定时间戳格式。同样在模型中添加
-protected function getDateFormate() {
+protected function getDateFormat() {
     reutrn date();// 当前时间戳
 }
 
