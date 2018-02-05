@@ -58,13 +58,13 @@ Route::get\('index/{id？}', fucntion\($id = null\) {
 
     return $id;
 
-}\)-&gt;where\('id', '\[0-9\]'\);
+}\)->where\('id', '\[0-9\]'\);
 
 Route::get\('index/{id？}/{name}', fucntion\($id = null, $name\) {
 
     return $id;
 
-}\)-&gt;where\(\['id'=&gt; '\[0-9\]', 'name'=&gt;'\[A-Za-z+\]'\);
+}\)->where\(\['id'=&gt; '\[0-9\]', 'name'=&gt;'\[A-Za-z+\]'\);
 
 
 
