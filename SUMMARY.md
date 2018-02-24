@@ -35,6 +35,7 @@
 * [JQuery](jquery.md)
   * [样式篇](jquery/yang-shi-pian.md)
   * [样式操作](jquery/yang-shi-cao-zuo.md)
+  * [DOM操作](jquery/domcao-zuo.md)
 * Ajax
   * [介绍](jie-shao.md)
 
