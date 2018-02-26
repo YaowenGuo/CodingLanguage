@@ -13,7 +13,7 @@
   * [Model](laravel/model.md)
   * [数据库](laravel/shu-ju-ku.md)
   * [View的Blade模板引擎](laravel/viewde-bland-mo-ban-yin-qing.md)
-  * [表单](laravel/biao-dan.md)
+  * [Laravel-admin-表单](laravel/biao-dan.md)
   * [Artisan Console](laravel/artisan-console.md)
   * [用户认证Auth](laravel/yong-hu-ren-zheng-auth.md)
   * [数据迁移](laravel/shu-ju-qian-yi.md)
