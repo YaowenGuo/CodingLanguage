@@ -27,6 +27,7 @@
   * [盒子模型](css-ceng-die-yang-shi-biao-cascading-style-sheets/he-zi-mo-xing.md)
   * [布局模型](css-ceng-die-yang-shi-biao-cascading-style-sheets/bu-ju-mo-xing.md)
   * [居中](css-ceng-die-yang-shi-biao-cascading-style-sheets/ju-zhong.md)
+  * [QA](css-ceng-die-yang-shi-biao-cascading-style-sheets/qa.md)
 * [JS 常用函数](js-chang-yong-han-shu.md)
   * [used](js-chang-yong-han-shu/used.md)
   * [事件](js-chang-yong-han-shu/shi-jian.md)
@@ -36,6 +37,7 @@
   * [样式篇](jquery/yang-shi-pian.md)
   * [样式操作](jquery/yang-shi-cao-zuo.md)
   * [DOM操作](jquery/domcao-zuo.md)
+  * [Event](jquery/event.md)
 * Ajax
   * [介绍](jie-shao.md)
 
