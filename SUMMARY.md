@@ -40,4 +40,6 @@
   * [Event](jquery/event.md)
 * Ajax
   * [介绍](jie-shao.md)
+* Mysql
+  * [qa](qa.md)
 
