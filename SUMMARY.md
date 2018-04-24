@@ -38,9 +38,9 @@
   * [样式操作](jquery/yang-shi-cao-zuo.md)
   * [DOM操作](jquery/domcao-zuo.md)
   * [Event](jquery/event.md)
-* Ajax
+* [Ajax](ajax.md)
   * [介绍](jie-shao.md)
-* Mysql
+* [Mysql](mysql.md)
   * [qa](qa.md)
 * [正则表达式](zheng-ze-biao-da-shi.md)
 
