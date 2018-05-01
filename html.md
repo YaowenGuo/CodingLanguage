@@ -23,22 +23,55 @@ html 的结构
 <html> <!-- html根标签 -->
 <head>  <!-- 页面信息，不会显示 -->
 	<title></title>
+	<meta name="key" content="value"/>  单标记标签
 </head>
 <body> <!-- 要显示的内容 -->
 
 </body>
 </html>
 ```
+### html 转移字符
+形式 &xxx
+&lt; less then 小于号
+&gt; greter than 大于号
+&nbsp; 空格
+&amp; &符号 
+&hr; 
+&copy; ©️
+
+### 注释
+注释不能嵌套
+```
+<!-- 内容 -->
+```
+
+### 标签
+
+<b></b> bold
+<strong></strong> 
+
 
 # 请求头
 Content-Type: text/html; charset=UTF-8 内容的数据类型和编码
 
 三种修改方式：
 1. 动态语言生成
-
+2. 服务器配置文件
+3. 在html 中使用meta 设置响应头等价物，它并不能改变响应头，只是能够告诉浏览器解析html的方式。起到和响应头相同的作用
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 # 响应头
 
 
+
+# 分类
+区块元素 block： 独占一行
+内联元素 in-line: 包裹内容
+
+<hx> 标题字在不同浏览器中的大小和间距是不同的。
+<p> 段落
+
+<div></div> 元素分组、分块
+<span></span> 行内分区，没有任何样式效果，用于单独加样式。
 
 # html5新增标签与删除标签
 ## 新增标签
