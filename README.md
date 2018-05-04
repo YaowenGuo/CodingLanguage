@@ -1,5 +1,8 @@
 # CodingLanguage
 
+C、C++、Java、Python、JavaScript、PHP 语言的语法对比和语言特性。
+
+
 ## [命名规范＆基本数据类型](./NamingRules.md)
 
 ## [常用数据结构](./DataStructure.md)
