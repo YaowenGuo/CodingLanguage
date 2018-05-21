@@ -18,16 +18,7 @@
   * [用户认证Auth](laravel/yong-hu-ren-zheng-auth.md)
   * [数据迁移](laravel/shu-ju-qian-yi.md)
   * [中间件MiddleWare](laravel/zhong-jian-jian-middleware.md)
-* [HTML](html.md)
-  * [标签](html/biao-qian.md)
-  * [表单](html/biao-dan.md)
-* [CSS 层叠样式表 \(Cascading Style Sheets\)](css-ceng-die-yang-shi-biao-cascading-style-sheets.md)
-  * [选择器](css-ceng-die-yang-shi-biao-cascading-style-sheets/xuan-ze-qi.md)
-  * [继承、层叠、特殊性、重要性](css-ceng-die-yang-shi-biao-cascading-style-sheets/ji-cheng-3001-ceng-die.md)
-  * [盒子模型](css-ceng-die-yang-shi-biao-cascading-style-sheets/he-zi-mo-xing.md)
-  * [布局模型](css-ceng-die-yang-shi-biao-cascading-style-sheets/bu-ju-mo-xing.md)
-  * [居中](css-ceng-die-yang-shi-biao-cascading-style-sheets/ju-zhong.md)
-  * [QA](css-ceng-die-yang-shi-biao-cascading-style-sheets/qa.md)
+  
 * [JS 常用函数](js-chang-yong-han-shu.md)
   * [used](js-chang-yong-han-shu/used.md)
   * [事件](js-chang-yong-han-shu/shi-jian.md)
@@ -43,4 +34,3 @@
 * [Mysql](mysql.md)
   * [qa](qa.md)
 * [正则表达式](zheng-ze-biao-da-shi.md)
-
