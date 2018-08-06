@@ -2,7 +2,23 @@
 
 * [Introduction](README.md)
   * [run envirement](run-envirement.md)
-* [Name\(命名限制\)](nameming-ming-xian-523629.md)
+* Variable
+  * [Name Rules](variable/name-rules.md)
+  * [Variable's Scope](variable/variable-scope.md)
+  * [js var let const](variable/js's-var-and-let.md)
+* [
+](./data-type.md)
+* [Fundamental Data Type](./DataStructure.md)
+* [Function](./Function.md)
+* [模块/包](./Module.md)
+* [条件判断](./ConditionalStatement.md)
+* [循环控制](./CycleTraversal.md)
+* [类](./Class.md)
+* [文件](./File.md)
+* [异常](./Exception.md)
+
+* Error
+    * [Python3](error/python.md)
 * [其他语言的调用](qi-ta-yu-yan-de-diao-yong.md)
   * [JNI](qi-ta-yu-yan-de-diao-yong/jni.md)
 * [Laravel](laravel.md)
@@ -18,7 +34,9 @@
   * [用户认证Auth](laravel/yong-hu-ren-zheng-auth.md)
   * [数据迁移](laravel/shu-ju-qian-yi.md)
   * [中间件MiddleWare](laravel/zhong-jian-jian-middleware.md)
-  
+  * Request and Response
+    * [Request](laravel/request/request.md)
+
 * [JS 常用函数](js-chang-yong-han-shu.md)
   * [used](js-chang-yong-han-shu/used.md)
   * [事件](js-chang-yong-han-shu/shi-jian.md)
