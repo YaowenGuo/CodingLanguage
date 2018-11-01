@@ -33,3 +33,7 @@ But according to your print statement, you write your script for Python 2.x, so 
 Also this sys.path.append("../python2.7/site-packages") line is strange in first line of your script.
 
 Also your indention of your first code that you pasted was wrong, and i think your are still using that, please use current edited version that is now in your question.
+
+# range()
+
+python3 中返回的是一个 range 对象(range(0, 3))，而不再是一个列表（[0, 1, 2]）。
