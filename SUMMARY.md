@@ -6,7 +6,8 @@
   * [Name Rules](variable/name-rules.md)
   * [Variable's Scope](variable/variable-scope.md)
   * [js var let const](variable/js's-var-and-let.md)
-* [Data Type](./data-type.md)
+* Data
+  * [Data Type](./data/data-type.md)
 * [Fundamental Data Type](./DataStructure.md)
 * Function
   * [Function](./function/Function.md)
@@ -22,6 +23,8 @@
 * [文件](./File.md)
 * [异常](./Exception.md)
 * [Python3](./python3.md)
+* String
+  * [截断](./string/split.md)
 
 * Error
     * [Python3](error/python.md)
