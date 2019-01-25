@@ -7,21 +7,25 @@
   * [Variable's Scope](variable/variable-scope.md)
   * [js var let const](variable/js's-var-and-let.md)
 * Data
-  * [Data Type](./data/data-type.md)
-* [Fundamental Data Type](./DataStructure.md)
+  * [Data Type](data/data-type.md)
+  * [Complex Data Type](data/complex_data_type.md)
 * Function
   * [Function](./function/Function.md)
   * [Overloading](./function/overloading.md)
+* Control Flow
+  * [分支](./ConditionalStatement.md)
+  * [循环](./CycleTraversal.md)
 * Class
   * [Definition](./class/definition.md)
   * [Initialization & Cleanup](./class/initialization_cleanup.md)
   * [访问控制](./class/access_control.md)
 * [模块/包](./Module.md)
-* [条件判断](./ConditionalStatement.md)
-* [循环控制](./CycleTraversal.md)
+
+
 * [类](./Class.md)
 * [文件](./File.md)
 * [异常](./Exception.md)
+
 * [Python3](./python3.md)
 * String
   * [截断](./string/split.md)
