@@ -1,3 +1,5 @@
+web 的组成部分， server、client、http协议。
+
 Ajax 就是做异步的一中技术
 
 
