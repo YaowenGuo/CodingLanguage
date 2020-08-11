@@ -9,6 +9,7 @@
   * [Name Rules](variable/name-rules.md)
   * [Variable's Scope](variable/variable-scope.md)
   * [js var let const](variable/js's-var-and-let.md)
+  * [Rust's ownership](variable/rust_ownership.md)
 * Data
   * [Data Type](data/data-type.md)
   * [Complex Data Type](data/complex_data_type.md)
