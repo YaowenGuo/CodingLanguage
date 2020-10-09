@@ -3,6 +3,9 @@
 * [Introduction](README.md)
   * [run envirement](install/run-envirement.md)
   * [php](debug/debug_php.md)
+* Help
+  * [python](help/python.md)
+
 * Debug
   * [PHP](debug/debug_php.md)
 * Variable & Constant
