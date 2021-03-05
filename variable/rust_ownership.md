@@ -73,11 +73,11 @@ println!("i value is: {}", i);
 熟悉所有权的存在是为了管理堆数据可以帮助理解它的工作方式。
 
 
-## 所有权规则
+### 所有权规则
 
 - Rust中的每个值都有一个变量，称为其所有者。
 
-- 同一时刻只能有一个所有者。
+- 同一时刻只能有一个所有者。(标量由于是值拷贝，因此同一时刻也仅有一个所有者。)
 
 - 当所有者超出作用域后，值就会被删除。
 
@@ -87,5 +87,63 @@ println!("i value is: {}", i);
 例如
 
 ```Rust
+let a = 3;
+let b = a;
+println!("Is a available: {}, {}", a, b);
+
+let s = String::from("hello world!");
+let s1 = s;
+// Will not working.
+println!("{}, {}", s, s1); 
 
 ```
+
+
+**复合类型的变量，函数参数同样会传递所有权。返回值也可以传递所有权。**
+
+
+```rust
+fn main() {
+    let s = String::from("hello");  // s comes into scope
+
+    takes_ownership(s);             // s's value moves into the function...
+                                    // ... and so is no longer valid here
+
+    let s1 = gives_ownership(); // s1 可用。
+
+} // Here, x goes out of scope, then s. But because s's value was moved, nothing
+  // special happens.
+
+fn takes_ownership(some_string: String) { // some_string comes into scope
+    println!("{}", some_string);
+} // Here, some_string goes out of scope and `drop` is called. The backing
+  // memory is freed.
+
+
+fn gives_ownership() -> String {             // gives_ownership will move its
+                                             // return value into the function
+                                             // that calls it
+
+    let some_string = String::from("hello"); // some_string comes into scope
+
+    some_string                              // some_string is returned and
+                                             // moves out to the calling
+                                             // function
+}
+
+```
+
+### 作用域
+
+一个花括号是一个作用域，在作用域内声明的变量，草除作用域后会失效。
+
+```rust
+{                      // s is not valid here, it’s not yet declared
+    let s = "hello";   // s is valid from this point forward
+
+    // do stuff with s
+}                      // this scope is now over, and s is no longer valid
+```
+
+### 引用和租借
+
