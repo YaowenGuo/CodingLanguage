@@ -54,12 +54,6 @@ println!("i value is: {}", i);
 ```
 
 
-
-## 引用
-
-
-
-
 ## Ownership
 
 堆空间的内存管理一直是个难题，有些语言要求编程人员自己管理堆空间（C/C++），有些语言使用垃圾回收器管理不再使用的堆。Rust 则使用所有权系统和一些列规则，在编译期检查。所有的所有权均不会在运行时降低程序的运行速度。
@@ -147,3 +141,89 @@ fn gives_ownership() -> String {             // gives_ownership will move its
 
 ### 引用和租借
 
+引用声明
+
+```rust
+let ref: &String;
+let s1 = String::from("hello");
+ref = &s1;
+
+// 标量
+
+let a = 32;
+let b = &a;
+```
+
+引用不转移所有权，不会在超出作用域而释放内存。我们把引用称为租借。
+
+引用默认也是不可变的，可变引用。
+
+- 可变引用的原变量必须是可变的。
+- 仅能有一个可变引用。可以有多个不可变引用。（避免数据竞争）
+- 不同作用域可以有多个可变引用
+
+This restriction allows for mutation but in a very controlled fashion. It’s something that new Rustaceans struggle with, because most languages let you mutate whenever you’d like.
+
+The benefit of having this restriction is that Rust can prevent data races at compile time. A data race is similar to a race condition and happens when these three behaviors occur:
+
+- Two or more pointers access the same data at the same time.
+- At least one of the pointers is being used to write to the data.
+- There’s no mechanism being used to synchronize access to the data.
+
+```rust
+let mut s = String::from("hello");
+
+let r1 = &mut s; // 可变引用。
+let r2 = &mut s; // 不合法
+println!("{}, {}", r1, r2);
+```
+
+
+```rust
+let mut s = String::from("hello");
+
+let r1 = &mut s; // 可变引用。
+{
+    let r2 = &mut s; // 不合法，r1 可以在内部作用域可见。
+    println!("{}, {}", r1, r2);
+} // 超出作用域 s3 被回收。
+```
+
+```rust
+let mut s = String::from("hello");
+{
+    let r2 = &mut s; // 合法。
+    println!("{}, {}", r1, r2);
+
+} // 超出作用域 s2 被回收。
+let r1 = &mut s; // 可变引用。
+```
+
+当变量有一个不变的引用时，就不能有一个可变的引用。
+
+```rust
+let mut s = String::from("hello");
+
+let r1 = & s; // 可变引用。
+let r2 = &mut s; // 不合法
+println!("{}, {}", r1, r2);
+```
+
+但是不可变引用发生在可变引用使用之前可以。
+
+```rust
+let mut s = String::from("hello");
+
+let r1 = &s; // no problem
+let r2 = &s; // no problem
+println!("{} and {}", r1, r2);
+// r1 and r2 are no longer used after this point
+
+let r3 = &mut s; // no problem
+println!("{}", r3);
+```
+
+
+#### 悬挂引用
+
+在有指针的语言中，很容易出现悬挂指针。即所指向的对象已经被回收。在 Rust 中，编译器会保证永远不会出现悬停引用。
