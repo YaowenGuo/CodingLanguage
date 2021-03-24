@@ -52,6 +52,27 @@ fn main() {
 }
 ```
 
+### 单元类型 (Unit type)
+
+Unit type 仅有一个值，即 (); 单元类型用于表示没有值，类似于其他语言中的 void; 
+
+Everything in Rust is an expression, and expressions that return "nothing" actually return (). The compiler will give an error if you have a function without a return type but return something other than () anyway. For example
+
+1. unit type是一个类型，有且仅有一个值，都写成小括号()
+单元类型()类似c/c++/java语言中的void。当一个函数并不需要返回值的时候，c/c++/java中函数返回void，rust则返回()。但语法层面上，void仅仅只是一个类型，该类型没有任何值;而单位类型()既是一个类型，同时又是该类型的值。
+
+2. 单元类型()也类似c/c++/java中的null，但却有很大不同。 null是一个特殊值，可以赋给不可类型的值，例如java中的对象，c中指向struct实例的指针，c++中的对象指针。但在rust中，()不可以赋值给除单元类型外的其它的类型的变量，()只能赋值给()。
+3. Rust标准库中使用单元类型()的一个例子是HashSet。一个HashSet只不过是HashMap的一个非常简单地包裹，写作：HashMap<T, ()>。HashMap的第二个泛型类型参数即用了单元类型()
+
+4. 可以用Result<(), MyErrorType>代替Option，某些开发者认为Result<(), MyErrorType>语义上能更简明地表示一个“结果”。
+
+```rust
+fn f() {
+    1i32 // error: mismatched types: expected `()` but found `int`
+}
+```
+
+
 
 ## 复合 compound
 
@@ -138,5 +159,15 @@ fn five() -> i32 {
 
 ```
 
+## 自定义
 
+三种
+
+1. struct
+    1. struct
+    2. tuple struct
+    3. unit-like struct
+2. enum
+
+3. trait object
 
