@@ -94,5 +94,19 @@ echo "PHP word!";
 ```
 
 
+## Python
+
+在解释器中执行 Python 文件
+
+```python
+>>> exec(open("filename.py").read())
+
+# or
+
+>>> from pathlib import Path
+
+>>> exec(Path("filename.py").read_text())
+```
+
 
 
